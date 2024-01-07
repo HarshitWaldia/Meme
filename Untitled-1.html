@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meme Categories</title>
+    <script>
+        function showMemes(category) {
+            var memeContainer = document.getElementById("meme-container");
+            
+            // Clear the existing memes
+            memeContainer.innerHTML = "";
+            
+            // Show memes based on the selected category
+            switch (category) {
+                case "sad":
+                    // Display sad memes
+                    memeContainer.innerHTML = "<img src='/C:/Users/harsh/mini_project_2/memes/img1.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img2.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img3.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img4.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img5.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img6.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img7.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img8.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img9.jpg' height='500' width='500'>";
+                    break;
+                case "happy":
+                    // Display happy memes
+                    memeContainer.innerHTML = "<img src='/C:/Users/harsh/mini_project_2/memes/img1.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img2.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img3.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img4.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img5.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img6.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img7.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img8.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img9.jpg' height='500' width='500'>";
+                    break;
+                case "gaming":
+                    // Display gaming memes
+                    memeContainer.innerHTML = "<img src='/C:/Users/harsh/mini_project_2/memes/img1.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img2.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img3.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img4.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img5.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img6.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img7.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img8.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img9.jpg' height='500' width='500'>";
+                    break;
+                case "foody":
+                    // Display foody memes
+                    memeContainer.innerHTML = "<img src='/C:/Users/harsh/mini_project_2/memes/img1.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img2.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img3.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img4.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img5.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img6.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img7.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img8.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img9.jpg' height='500' width='500'>";
+                    break;
+                case "angry":
+                    // Display angry memes
+                    memeContainer.innerHTML = "<img src='/C:/Users/harsh/mini_project_2/memes/img1.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img2.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img3.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img4.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img5.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img6.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img7.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img8.jpg' height='500' width='500'><br><img src='/C:/Users/harsh/mini_project_2/memes/img9.jpg' height='500' width='500'>";
+                    break;
+                default:
+                    // Invalid category selected
+                    memeContainer.innerHTML = "Invalid category";
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Meme Categories</h1>
+    
+    <div>
+        <label for="category-select">Select a category:</label>
+        <select id="category-select" onchange="showMemes(this.value)">
+            <option value="">Select</option>
+            <option value="sad">Sad</option>
+            <option value="happy">Happy</option>
+            <option value="gaming">Gaming</option>
+            <option value="foody">Foody</option>
+            <option value="angry">Angry</option>
+        </select>
+    </div>
+    
+    <div id="meme-container"></div>
+</body>
+</html>
